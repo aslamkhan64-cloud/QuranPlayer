@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>QuranPlayer</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
+  body { background: radial-gradient(circle at top, #0a1a3a 0%, #000000 100%); color: #fff; padding-bottom: 80px; overflow-x: hidden; min-height: 100vh; position: relative; }
+  #galaxy-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1; pointer-events: none; }
+  
+  .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
+  .glass-icon { background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 50%; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); cursor: pointer; }
+  .glass-icon:active { transform: scale(0.9); background: rgba(255, 255, 255, 0.15); }
+  .glass-icon.active { background: #4a8cff; border-color: #4a8cff; }
+
+  .header { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+  .premium-btn { border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff; padding: 8px 16px; border-radius: 20px; font-size: 14px; display: flex; align-items: center; gap: 5px; }
+  .icon-btn { background: rgba(255,255,255,0.1); border: none; color: #fff; padding: 10px; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; }
+  h1 { font-size: 38px; padding: 0 20px; margin-bottom: 20px; font-weight: 700; }
+  
+  .page { display: none; }
+  .page.active { display: block; animation: fadeIn 0.3s; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  .recently-played { display: flex; align-items: center; justify-content: space-between; padding: 0 20px; margin-bottom: 30px; }
+  .recently-played img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; cursor: pointer; box-shadow: 0 0 25px rgba(74, 140, 255, 0.3); }
+  .recently-played-info { flex: 1; padding-left: 20px; }
+  .recently-played-info h3 { color: #888; font-size: 14px; font-weight: normal; margin-bottom: 5px; }
+  .recently-played-info h2 { font-size: 22px; margin-bottom: 15px; font-weight: 600; }
+  .continue-btn { background: #fff; color: #000; border: none; padding: 12px 20px; border-radius: 25px; font-weight: 600; display: flex; align-items: center; gap: 8px; cursor: pointer; }
+
+  .section-header { display: flex; justify-content: space-between; align-items: center; padding: 0 20px; margin-bottom: 15px; margin-top: 25px; }
+  .section-header h2 { font-size: 22px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+  .section-header a { color: #4a8cff; text-decoration: none; font-size: 15px; cursor: pointer; }
+  .star-glow { color: #fff; text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.4); font-size: 18px; }
+  
+  .fav-container { display: flex; gap: 20px; padding: 0 20px; overflow-x: auto; scrollbar-width: none; }
+  .fav-item { text-align: center; cursor: pointer; min-width: 80px; }
+  .fav-item img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; }
+  .fav-item p { font-size: 13px; color: #ddd; }
+  
+  .playlist-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 0 20px; margin-bottom: 30px; }
+  .playlist-card { border-radius: 20px; padding: 20px; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; position: relative; overflow: hidden; }
+  .playlist-card h3 { font-size: 18px; font-weight: 600; z-index: 2; }
+  .bg-dark { background: rgba(26, 26, 26, 0.6); } .bg-blue { background: linear-gradient(135deg, rgba(13, 71, 161, 0.7), rgba(74, 140, 255, 0.7)); } .bg-pink { background: linear-gradient(135deg, rgba(136, 14, 79, 0.7), rgba(255, 64, 129, 0.7)); } .bg-navy { background: linear-gradient(135deg, rgba(0, 0, 81, 0.7), rgba(41, 98, 255, 0.7)); }
+
+  .new-reciter-container { display: flex; gap: 15px; padding: 0 20px; overflow-x: auto; scrollbar-width: none; margin-bottom: 20px; }
+  .new-reciter-item { text-align: center; cursor: pointer; min-width: 100px; position: relative; }
+  .new-reciter-item img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; }
+  .new-badge { position: absolute; top: 0; right: 0; background: #4caf50; color: white; font-size: 10px; font-weight: bold; padding: 2px 8px; border-radius: 10px; }
+  .new-reciter-item p { font-size: 14px; color: #fff; font-weight: 500; line-height: 1.2; }
+
+  .top-reciter-card { margin: 0 20px 20px 20px; background: rgba(255,255,255,0.05); border-radius: 20px; padding: 20px; display: flex; flex-direction: column; align-items: center; position: relative; cursor: pointer; border: 1px solid rgba(255,255,255,0.1); }
+  .top-images { display: flex; justify-content: center; align-items: center; height: 100px; margin-bottom: 15px; }
+  .top-images img { width: 80px; height: 80px; border-radius: 50%; border: 3px solid #1a1a1a; object-fit: cover; }
+  .top-images img:nth-child(1) { transform: translateX(25px) scale(0.8); z-index: 1; }
+  .top-images img:nth-child(2) { z-index: 2; width: 100px; height: 100px; }
+  .top-images img:nth-child(3) { transform: translateX(-25px) scale(0.8); z-index: 1; }
+  .top-reciter-info-card { text-align: left; width: 100%; }
+  .top-reciter-info-card h3 { font-size: 20px; font-weight: 600; color: #fff; }
+  .top-reciter-info-card p { font-size: 14px; color: #888; }
+  .top-reciter-arrow { position: absolute; right: 20px; bottom: 20px; font-size: 20px; color: #fff; }
+
+  .surah-list-container { padding: 20px; }
+  .surah-item { display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 15px; margin-bottom: 10px; cursor: pointer; border: 1px solid rgba(255,255,255,0.05); }
+  .surah-left { display: flex; align-items: center; gap: 15px; }
+  .surah-number { font-size: 16px; color: #888; width: 25px; text-align: center; }
+  .surah-info h3 { font-size: 17px; font-weight: 500; }
+  .surah-info p { font-size: 12px; color: #888; }
+  .action-icons { display: flex; gap: 15px; color: #aaa; font-size: 18px; }
+  .action-icons i.active { color: #ffd700; }
+
+  .mini-player { position: fixed; bottom: 80px; left: 15px; right: 15px; background: rgba(30, 30, 30, 0.85); backdrop-filter: blur(20px); border-radius: 20px; padding: 10px 15px; display: none; align-items: center; justify-content: space-between; z-index: 100; cursor: pointer; border: 1px solid rgba(255,255,255,0.1); }
+  .mini-info { display: flex; align-items: center; gap: 12px; }
+  .mini-info img { width: 45px; height: 45px; border-radius: 12px; object-fit: cover; }
+  .mini-controls { display: flex; gap: 20px; font-size: 20px; align-items: center; }
+
+  .full-player { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(2, 11, 38, 0.95); backdrop-filter: blur(30px); z-index: 9999; padding: 20px; display: flex; flex-direction: column; overflow: hidden; transform: translateY(100%); transition: transform 0.3s ease-in-out; }
+  .full-player.active { transform: translateY(0); }
+  #player-animation-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.6; pointer-events: none; background-size: cover; background-position: center; transition: 0.5s; }
+  
+  .rain-anim { background: linear-gradient(transparent, rgba(255,255,255,0.2)), url('https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?q=80&w=1000&auto=format&fit=crop') center/cover; animation: rain 0.5s linear infinite; }
+  @keyframes rain { 0% { background-position: 0 0, center; } 100% { background-position: 0 100px, center; } }
+  .waves-anim { background: url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?q=80&w=1000&auto=format&fit=crop') center/cover; animation: waveMove 10s infinite alternate; }
+  @keyframes waveMove { 0% { transform: scale(1); } 100% { transform: scale(1.1); } }
+  .fire-anim { background: url('https://images.unsplash.com/photo-1475738990896-af9f8a2e0c74?q=80&w=1000&auto=format&fit=crop') center/cover; animation: fireMove 2s infinite alternate; }
+  @keyframes fireMove { 0% { transform: scale(1) translateY(0); } 100% { transform: scale(1.05) translateY(-10px); } }
+  .birds-anim { background: url('https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=1000&auto=format&fit=crop') center/cover; animation: birdMove 15s infinite alternate; }
+  @keyframes birdMove { 0% { transform: scale(1); } 100% { transform: scale(1.15); } }
+
+  .player-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; position: relative; z-index: 10; }
+  .close-btn { background: none; border: none; color: #fff; font-size: 24px; cursor: pointer; }
+  .bg-sound-btn { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 8px 15px; border-radius: 20px; font-size: 14px; cursor: pointer; }
+  
+  .text-display-area { flex: 1; overflow-y: auto; display: none; flex-direction: column; padding: 20px 10px; margin-bottom: 20px; position: relative; z-index: 10; justify-content: center; text-align: center; }
+  .arabic-text { font-family: 'Amiri', serif; font-size: 32px; line-height: 2; direction: rtl; color: #fff; animation: fadeInText 0.5s ease-out; }
+  .arabic-text.glow { animation: glowText 2s infinite alternate; }
+  @keyframes fadeInText { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes glowText { 0% { text-shadow: 0 0 8px rgba(255,255,255,0.3), 0 0 15px rgba(74,140,255,0.2); } 100% { text-shadow: 0 0 15px rgba(255,255,255,0.9), 0 0 25px rgba(74,140,255,0.7); } }
+
+  .progress-container { margin-bottom: 30px; margin-top: auto; padding: 10px 0; position: relative; z-index: 10; }
+  .progress-bar { width: 100%; height: 6px; background: rgba(255,255,255,0.2); border-radius: 3px; position: relative; cursor: pointer; }
+  .progress-fill { width: 0%; height: 100%; background: #4a8cff; border-radius: 3px; position: relative; }
+  .progress-fill::after { content: ''; position: absolute; right: -6px; top: -3px; width: 12px; height: 12px; background: #fff; border-radius: 50%; box-shadow: 0 0 10px #4a8cff; }
+  .time-labels { display: flex; justify-content: space-between; font-size: 12px; color: #aaa; margin-top: 8px; }
+
+  .player-info-large { display: flex; flex-direction: column; align-items: center; margin-bottom: 20px; position: relative; z-index: 10; }
+  .info-left-large { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 5px; }
+  .info-left-large img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,0.2); margin-bottom: 5px; }
+  .info-left-large h2 { font-size: 24px; font-weight: 600; }
+  .star-icon { font-size: 26px; cursor: pointer; color: #555; margin-top: 5px; margin-bottom: 10px; }
+  .star-icon.active { color: #ffd700; }
+
+  .controls-large { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding: 0 10px; position: relative; z-index: 10; }
+  .control-btn { background: none; border: none; color: #fff; font-size: 26px; cursor: pointer; }
+  .play-btn { font-size: 60px; color: #fff; text-shadow: 0 0 20px rgba(255,255,255,0.3); }
+  .speed-btn { font-size: 16px; font-weight: 600; color: #aaa; background: rgba(255,255,255,0.1); border: none; padding: 5px 10px; border-radius: 10px; cursor: pointer; }
+
+  .bottom-icons { display: flex; justify-content: space-between; padding: 10px 10px; align-items: center; margin-bottom: 10px; position: relative; z-index: 10; }
+  .bottom-icons i { font-size: 18px; color: #ddd; }
+
+  .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(10, 10, 10, 0.85); backdrop-filter: blur(20px); display: flex; justify-content: space-around; padding: 15px 0 25px 0; border-top: 1px solid rgba(255,255,255,0.1); z-index: 1000; border-radius: 30px 30px 0 0; transition: transform 0.3s ease; }
+  .nav-item { display: flex; flex-direction: column; align-items: center; color: #666; font-size: 12px; gap: 6px; cursor: pointer; }
+  .nav-item.active { color: #fff; }
+  .nav-item i { font-size: 22px; }
+  .bottom-nav.hidden { transform: translateY(100%); }
+
+  .modal { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 10000; display: none; justify-content: center; align-items: flex-end; }
+  .modal.active { display: flex; }
+  .modal-content { background: #0a1a3a; width: 100%; border-radius: 25px 25px 0 0; padding: 20px; max-height: 80vh; overflow-y: auto; border-top: 1px solid rgba(255,255,255,0.1); }
+  .modal-title { font-size: 20px; font-weight: bold; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
+  
+  .slider-box { margin-bottom: 20px; }
+  .slider-box label { display: block; margin-bottom: 10px; font-size: 14px; color: #ccc; }
+  input[type=range] { width: 100%; accent-color: #4a8cff; }
+  .search-input { width: 100%; padding: 15px; border-radius: 15px; background: rgba(255,255,255,0.1); border: none; color: white; margin-bottom: 15px; font-size: 16px; outline: none; }
+  
+  .sound-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px; text-align: center; }
+  .sound-item { display: flex; flex-direction: column; align-items: center; cursor: pointer; position: relative; padding: 10px; border-radius: 15px; }
+  .sound-item.selected { background: rgba(255,255,255,0.1); }
+  .sound-item i { font-size: 28px; margin-bottom: 10px; color: #ccc; }
+  .sound-item.selected i { color: #fff; }
+  .sound-item p { font-size: 13px; color: #aaa; }
+  .sound-item.selected p { color: #fff; font-weight: bold; }
+</style>
+</head>
+<body>
+  <canvas id="galaxy-canvas"></canvas>
+<!-- HOME PAGE -->
+<div id="page-home" class="page active">
+  <div class="header">
+    <button class="premium-btn"><i class="fas fa-crown" style="color: #ffd700;"></i> Premium</button>
+    <button class="icon-btn"><i class="fas fa-chart-bar"></i></button>
+  </div>
+  <h1>Home</h1>
+  <div class="recently-played" id="recentlyPlayedSection" style="display: none;">
+    <img id="recentImg" src="" onclick="playRecent()">
+    <div class="recently-played-info">
+      <h3>Recently played</h3>
+      <h2 id="recentName">Yasser Al-Dosari</h2>
+      <button class="continue-btn" onclick="playRecent()"><i class="fas fa-play"></i> Continue listening</button>
+    </div>
+  </div>
+  <div class="recently-played" id="defaultTopSection">
+    <img src="https://server11.mp3quran.net/api/img/reciters/yasser.jpg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3023/3023274.png'" onclick="openQariProfile('yasser')">
+    <div class="recently-played-info">
+      <h3>From your favourites</h3>
+      <h2>Yasser Al-Dosari</h2>
+      <button class="continue-btn" onclick="openQariProfile('yasser')"><i class="fas fa-play"></i> Continue listening</button>
+    </div>
+  </div>
+  
+  <!-- PLAYLISTS -->
+  <div class="section-header">
+    <h2>Playlists</h2>
+    <a href="#">See all</a>
+  </div>
+  <div class="playlist-grid">
+    <div class="playlist-card bg-dark glass" onclick="showFavorites()"><i class="fas fa-star" style="color: #ffd700; font-size: 30px; margin-bottom: 10px;"></i><h3>Favourites</h3></div>
+    <div class="playlist-card bg-blue glass" onclick="switchTab('reciters', document.getElementById('nav-reciters'))"><i class="fas fa-bullseye" style="font-size: 30px; margin-bottom: 10px;"></i><h3>Focus &<br>Work</h3></div>
+  </div>
+
+  <!-- NEWLY ADDED -->
+  <div class="section-header">
+    <h2>Newly added</h2>
+    <a>See all</a>
+  </div>
+  <div class="new-reciter-container" id="homeNewReciters"></div>
+
+  <!-- YOUR FAVORITES -->
+  <div class="section-header">
+    <h2><i class="fas fa-star star-glow"></i> Your favorites</h2>
+    <a onclick="showFavorites()">See all</a>
+  </div>
+  <div class="fav-container" id="homeFavorites"></div>
+</div>
+
+<!-- RECITERS PAGE -->
+<div id="page-reciters" class="page">
+  <div class="header"><h1>Reciters</h1></div>
+  <div class="top-reciter-card" onclick="alert('See all Top Reciters')">
+    <div class="top-images">
+      <img src="https://server11.mp3quran.net/api/img/reciters/yasser.jpg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3023/3023274.png'">
+      <img src="https://server8.mp3quran.net/api/img/reciters/mossad.jpg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3023/3023274.png'">
+      <img src="https://server8.mp3quran.net/api/img/reciters/afs.jpg" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3023/3023274.png'">
+    </div>
+    <div class="top-reciter-info-card">
+      <h3>Top Reciters</h3>
+      <p>This month</p>
+    </div>
+    <i class="fas fa-chevron-right top-reciter-arrow"></i>
+  </div>
+  <div class="section-header">
+    <h2>New reciters</h2>
+    <a>See all</a>
+  </div>
+  <div class="new-reciter-container" id="newRecitersList"></div>
+  <div class="section-header">
+    <h2>All Reciters</h2>
+  </div>
+  <div class="surah-list-container" id="allRecitersList"></div>
+</div>
+
+<!-- FAVORITES PAGE -->
+<div id="page-favorites" class="page">
+  <div class="header">
+    <button class="close-btn" onclick="switchTab('home', document.getElementById('nav-home'))"><i class="fas fa-arrow-left"></i></button>
+    <h1>Favourites</h1>
+    <div style="width: 24px;"></div>
+  </div>
+  <div class="surah-list-container" id="favoritesList"></div>
+</div>
+
+<!-- SETTINGS PAGE -->
+<div id="page-settings" class="page">
+  <div class="header"><h1>Settings</h1></div>
+  <div class="surah-list-container">
+    <div class="surah-item"><div class="surah-info"><h3>App Version</h3><p>v6.0.0 (Premium Free)</p></div></div>
+    <div class="surah-item"><div class="surah-info"><h3>Developer</h3><p>Made with ❤️ for the Ummah</p></div></div>
+  </div>
+</div>
+
+<!-- SEARCH PAGE -->
+<div id="page-search" class="page">
+  <div class="header"><h1>Search</h1></div>
+  <div style="padding: 0 20px;">
+    <input type="text" class="search-input" id="searchInput" placeholder="Search reciters..." oninput="performSearch()">
+  </div>
+  <div class="surah-list-container" id="searchResults"></div>
+</div>
+
+<!-- QARI PROFILE PAGE -->
+<div id="page-profile" class="page">
+  <div class="header" style="position: absolute; z-index: 10; width: 100%;">
+    <button class="close-btn" onclick="goBackHome()"><i class="fas fa-arrow-left"></i></button>
+  </div>
+  <div style="text-align: center; margin-top: 50px;">
+    <img id="profileImg" src="" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+    <h1 id="profileName" style="padding: 0;">Yasser Al-Dosari</h1>
+    <p id="profileSurahCount" style="color: #888; margin-top: 5px;">114 Surahs</p>
+  </div>
+  <div class="surah-list-container" id="profileSurahList"></div>
+</div>
+
+<!-- BACKGROUND SOUNDS PAGE -->
+<div id="page-sounds" class="page" style="background: #111; z-index: 10001; position: fixed; top:0; left:0; width:100%; height:100%; overflow-y: auto;">
+  <div class="header" style="padding-bottom: 0;">
+    <button class="close-btn" onclick="closeSoundsPage()"><i class="fas fa-times"></i></button>
+    <h2 style="font-size: 20px;">Background sound</h2>
+    <button class="close-btn" onclick="closeSoundsPage()"><i class="fas fa-check"></i></button>
+  </div>
+  <div style="padding: 0 20px;">
+    <input type="text" class="search-input" placeholder="Search sounds..." style="background: rgba(255,255,255,0.05);">
+  </div>
+  <div class="sound-grid" id="soundGrid"></div>
+</div>
+
+<!-- MINI PLAYER -->
+<div class="mini-player" id="miniPlayer" onclick="openFullPlayer()">
+  <div class="mini-info">
+    <img id="miniImg" src="">
+    <div>
+      <h4 id="miniTitle">Surah Name</h4>
+      <p id="miniReciter" style="font-size: 12px; color: #aaa;">Qari Name</p>
+    </div>
+  </div>
+  <div class="mini-controls">
+    <i class="fas fa-play" id="miniPlayIcon" onclick="event.stopPropagation(); togglePlay()"></i>
+    <i class="fas fa-forward" onclick="event.stopPropagation(); playNext()"></i>
+  </div>
+</div>
+
+<!-- FULL PLAYER -->
+<div class="full-player" id="fullPlayer" ontouchstart="handleTouchStart(event)" ontouchend="handleTouchEnd(event)">
+  <div id="player-animation-bg"></div>
+  
+  <div class="player-top">
+    <button class="close-btn" onclick="closeFullPlayer()"><i class="fas fa-chevron-down"></i></button>
+    <button class="bg-sound-btn" onclick="openSoundsPage()">
+      <i class="fas" id="currentSoundIcon"></i> <span id="currentSoundText">Background sound</span> <i class="fas fa-chevron-down" style="font-size: 10px;"></i>
+    </button>
+  </div>
+
+  <div class="text-display-area" id="textDisplayArea">
+    <div id="arabicText" class="arabic-text glow">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+  </div>
+
+  <div class="player-info-large">
+    <div class="info-left-large">
+      <img id="fullImg" src="">
+      <div>
+        <h2 id="fullSurahName">Surah</h2>
+        <p id="fullReciterName" style="color: #aaa;">Qari</p>
+      </div>
+      <i class="far fa-star star-icon" id="fullStarIcon" onclick="toggleFavoriteCurrent()"></i>
+    </div>
+  </div>
+  
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar" ontouchstart="seekAudio(event)" onclick="seekAudio(event)">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="time-labels"><span id="currentTime">00:00</span><span id="totalTime">00:00</span></div>
+  </div>
+  
+  <div class="controls-large">
+    <button class="speed-btn" id="speedBtn" onclick="toggleModal('modalSpeed')">1x</button>
+    <button class="control-btn" onclick="playPrev()"><i class="fas fa-backward"></i></button>
+    <button class="control-btn play-btn" onclick="togglePlay()"><i class="fas fa-play" id="playIcon"></i></button>
+    <button class="control-btn" onclick="playNext()"><i class="fas fa-forward"></i></button>
+    <button class="control-btn" onclick="toggleModal('modalSleep')"><i class="fas fa-moon"></i></button>
+  </div>
+  
+  <div class="bottom-icons">
+    <div class="glass-icon" onclick="toggleModal('modalVolume')"><i class="fas fa-volume-up"></i></div>
+    <div class="glass-icon" id="textToggleBtn" onclick="toggleTextArea()"><i class="fas fa-language"></i></div>
+    <div class="glass-icon" onclick="alert('Casting...')"><i class="fas fa-cast"></i></div>
+    <div class="glass-icon" onclick="toggleModal('modalQueue')"><i class="fas fa-list-ul"></i></div>
+  </div>
+</div>
+
+<!-- MODALS -->
+<div class="modal" id="modalSpeed">
+  <div class="modal-content glass">
+    <div class="modal-title">Playback Speed <i class="fas fa-times" onclick="toggleModal('modalSpeed')"></i></div>
+    <button class="surah-item" style="width: 100%;" onclick="setSpeed(1)">1x (Normal)</button>
+    <button class="surah-item" style="width: 100%;" onclick="setSpeed(1.25)">1.25x</button>
+    <button class="surah-item" style="width: 100%;" onclick="setSpeed(1.5)">1.5x</button>
+    <button class="surah-item" style="width: 100%;" onclick="setSpeed(2)">2x</button>
+  </div>
+</div>
+
+<div class="modal" id="modalSleep">
+  <div class="modal-content glass">
+    <div class="modal-title">Sleep Timer <i class="fas fa-times" onclick="toggleModal('modalSleep')"></i></div>
+    <button class="surah-item" style="width: 100%;" onclick="setSleep(15)">15 Minutes</button>
+    <button class="surah-item" style="width: 100%;" onclick="setSleep(30)">30 Minutes</button>
+    <button class="surah-item" style="width: 100%;" onclick="setSleep(60)">1 Hour</button>
+    <button class="surah-item" style="width: 100%;" onclick="setSleep(0)">Turn Off</button>
+  </div>
+</div>
+
+<div class="modal" id="modalVolume">
+  <div class="modal-content glass">
+    <div class="modal-title">Volume Settings <i class="fas fa-times" onclick="toggleModal('modalVolume')"></i></div>
+    <div class="slider-box">
+      <label><i class="fas fa-book-open"></i> Quran Recitation</label>
+      <input type="range" min="0" max="1" step="0.1" value="1" oninput="audio.volume = this.value">
+    </div>
+    <div class="slider-box">
+      <label><i class="fas fa-cloud-rain"></i> Background Sound</label>
+      <input type="range" min="0" max="1" step="0.1" value="0.5" oninput="if(bgAudio) bgAudio.volume = this.value">
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modalQueue">
+  <div class="modal-content glass">
+    <div class="modal-title">Continue Playing <i class="fas fa-times" onclick="toggleModal('modalQueue')"></i></div>
+    <div id="queueList"></div>
+  </div>
+</div>
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav" id="bottomNav">
+  <div class="nav-item active" id="nav-home" onclick="switchTab('home', this)"><i class="fas fa-home"></i>Home</div>
+  <div class="nav-item" id="nav-reciters" onclick="switchTab('reciters', this)"><i class="fas fa-user"></i>Reciters</div>
+  <div class="nav-item" id="nav-settings" onclick="switchTab('settings', this)"><i class="fas fa-cog"></i>Settings</div>
+  <div class="nav-item" id="nav-search" onclick="switchTab('search', this)"><i class="fas fa-search"></i>Search</div>
+</div>
+
+<audio id="quranAudio"></audio>
+<audio id="bgAudio" loop></audio>
+  <script>
+    // 1. GALAXY STARS BACKGROUND ANIMATION
+    const canvas = document.getElementById('galaxy-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let stars = [];
+
+    function resizeCanvas() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    for(let i = 0; i < 200; i++) {
+      stars.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: Math.random() * 1.5 + 0.5,
+        alpha: Math.random(),
+        speed: Math.random() * 0.02 + 0.005,
+        vy: Math.random() * 0.2 + 0.1
+      });
+    }
+
+    function drawGalaxy() {
+      ctx.clearRect(0, 0, width, height);
+      stars.forEach(star => {
+        star.alpha += star.speed;
+        if (star.alpha > 1 || star.alpha < 0.2) star.speed = -star.speed;
+        star.y -= star.vy;
+        if (star.y < 0) { star.y = height; star.x = Math.random() * width; }
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+        if(star.r > 1.2) { ctx.shadowBlur = 10; ctx.shadowColor = "#fff"; } else { ctx.shadowBlur = 0; }
+        ctx.fill();
+      });
+      requestAnimationFrame(drawGalaxy);
+    }
+    drawGalaxy();
+
+    // 2. DATA & MOSSAD FIXED
+    const allSurahs = ["Al-Fatihah", "Al-Baqarah", "Ali 'Imran", "An-Nisa", "Al-Ma'idah", "Al-An'am", "Al-A'raf", "Al-Anfal", "At-Tawbah", "Yunus", "Hud", "Yusuf", "Ar-Ra'd", "Ibrahim", "Al-Hijr", "An-Nahl", "Al-Isra", "Al-Kahf", "Maryam", "Ta-Ha", "Al-Anbiya", "Al-Hajj", "Al-Mu'minun", "An-Nur", "Al-Furqan", "Ash-Shu'ara", "An-Naml", "Al-Qasas", "Al-Ankabut", "Ar-Rum", "Luqman", "As-Sajdah", "Al-Ahzab", "Saba", "Fatir", "Ya-Sin", "As-Saffat", "Sad", "Az-Zumar", "Ghafir", "Fussilat", "Ash-Shura", "Az-Zukhruf", "Ad-Dukhan", "Al-Jathiyah", "Al-Ahqaf", "Muhammad", "Al-Fath", "Al-Hujurat", "Qaf", "Adh-Dhariyat", "At-Tur", "An-Najm", "Al-Qamar", "Ar-Rahman", "Al-Waqi'ah", "Al-Hadid", "Al-Mujadila", "Al-Hashr", "Al-Mumtahanah", "As-Saff", "Al-Jumu'ah", "Al-Munafiqun", "At-Taghabun", "At-Talaq", "At-Tahrim", "Al-Mulk", "Al-Qalam", "Al-Haqqah", "Al-Ma'arij", "Nuh", "Al-Jinn", "Al-Muzzammil", "Al-Muddaththir", "Al-Qiyamah", "Al-Insan", "Al-Mursalat", "An-Naba", "An-Nazi'at", "Abasa", "At-Takwir", "Al-Infitar", "Al-Mutaffifin", "Al-Inshiqaq", "Al-Buruj", "At-Tariq", "Al-A'la", "Al-Ghashiyah", "Al-Fajr", "Al-Balad", "Ash-Shams", "Al-Lail", "Ad-Duha", "Ash-Sharh", "At-Tin", "Al-Alaq", "Al-Qadr", "Al-Bayyinah", "Az-Zalzalah", "Al-Adiyat", "Al-Qari'ah", "At-Takathur", "Al-Asr", "Al-Humazah", "Al-Fil", "Quraysh", "Al-Ma'un", "Al-Kawthar", "Al-Kafirun", "An-Nasr", "Al-Masad", "Al-Ikhlas", "Al-Falaq", "An-Nas"];
+
+    const qaris = [
+      { id: 'yasser', name: 'Yasser Al-Dosari', img: 'https://server11.mp3quran.net/api/img/reciters/yasser.jpg', server: 'https://server11.mp3quran.net/yasser/', total: 114 },
+      // Mossad Fixed (server8 is correct for his audio)
+      { id: 'mossad', name: 'Abdul Rahman Mossad', img: 'https://server8.mp3quran.net/api/img/reciters/mossad.jpg', server: 'https://server8.mp3quran.net/mossad/', total: 114 },
+      { id: 'mishary', name: 'Mishary Alafasy', img: 'https://server8.mp3quran.net/api/img/reciters/afs.jpg', server: 'https://server8.mp3quran.net/afs/', total: 114 },
+      { id: 'sudais', name: 'Abdulrahman Al-Sudais', img: 'https://server11.mp3quran.net/api/img/reciters/sds.jpg', server: 'https://server11.mp3quran.net/sds/', total: 114 },
+      { id: 'maher', name: 'Maher Al-Muaiqly', img: 'https://server12.mp3quran.net/api/img/reciters/maher.jpg', server: 'https://server12.mp3quran.net/maher/', total: 114 },
+      { id: 'shuraim', name: 'Saud Al-Shuraim', img: 'https://server11.mp3quran.net/api/img/reciters/shur.jpg', server: 'https://server11.mp3quran.net/shur/', total: 114 },
+      { id: 'alijaber', name: 'Ali Jaber', img: 'https://server11.mp3quran.net/api/img/reciters/a_jbr.jpg', server: 'https://server11.mp3quran.net/a_jbr/', total: 114 },
+      { id: 'ghamdi', name: 'Saad Al-Ghamdi', img: 'https://server7.mp3quran.net/api/img/reciters/s_gmd.jpg', server: 'https://server7.mp3quran.net/s_gmd/', total: 114 },
+      { id: 'ajmi', name: 'Ahmad Al-Ajmi', img: 'https://server10.mp3quran.net/api/img/reciters/ajm.jpg', server: 'https://server10.mp3quran.net/ajm/', total: 43 }
+    ];
+
+    const soundsList = [
+      { id: 'none', name: 'No sounds', icon: 'fa-ban', url: '', bgClass: '' },
+      { id: 'rain', name: 'Rain', icon: 'fa-cloud-rain', url: 'https://cdn.pixabay.com/download/audio/2022/03/10/audio_2c3a4f5e5d.mp3', bgClass: 'rain-anim' },
+      { id: 'birds', name: 'Birds', icon: 'fa-dove', url: 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3', bgClass: 'birds-anim' },
+      { id: 'fire', name: 'Fire', icon: 'fa-fire', url: 'https://cdn.pixabay.com/download/audio/2021/08/09/audio_16c683e2a7.mp3', bgClass: 'fire-anim' },
+      { id: 'waves', name: 'Waves', icon: 'fa-water', url: 'https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0c6ff1bab.mp3', bgClass: 'waves-anim' }
+    ];
+
+    let currentQari = qaris[0];
+    let currentSurahIndex = 0;
+    let favorites = JSON.parse(localStorage.getItem('quranFavorites')) || [];
+    let recentPlay = JSON.parse(localStorage.getItem('recentPlay')) || null;
+    let sleepTimer = null;
+    let isTextVisible = false;
+    let currentSoundId = 'none';
+    let touchStartY = 0;
+    let currentAyahs = [];
+    let currentAyahIndex = 0;
+
+    const audio = document.getElementById('quranAudio');
+    const bgAudio = document.getElementById('bgAudio');
+
+    function init() {
+      loadHomeFavorites();
+      loadRecitersPage();
+      loadHomeNewReciters();
+      updateFavIcon();
+      checkRecentlyPlayed();
+      renderSounds();
+    }
+
+    // 3. LOADERS
+    function checkRecentlyPlayed() {
+      if(recentPlay) {
+        document.getElementById('defaultTopSection').style.display = 'none';
+        document.getElementById('recentlyPlayedSection').style.display = 'flex';
+        document.getElementById('recentImg').src = recentPlay.img;
+        document.getElementById('recentName').innerText = recentPlay.qariName;
+      }
+    }
+
+    function playRecent() {
+      if(recentPlay) {
+        currentQari = qaris.find(q => q.id === recentPlay.qariId);
+        playSurah(recentPlay.surahNum, recentPlay.surahName);
+      }
+    }
+
+    function loadHomeFavorites() {
+      const container = document.getElementById('homeFavorites');
+      container.innerHTML = '';
+      if(favorites.length === 0) {
+        container.innerHTML = '<p style="color: #888; font-size: 14px;">No favorites yet.</p>';
+        return;
+      }
+      const uniqueQaris = [...new Set(favorites.map(f => f.qariId))];
+      uniqueQaris.slice(0, 8).forEach(qariId => {
+        const qari = qaris.find(q => q.id === qariId);
+        if(qari) {
+          const div = document.createElement('div');
+          div.className = 'fav-item';
+          div.onclick = () => openQariProfile(qari.id);
+          div.innerHTML = `<img src="${qari.img}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3023/3023274.png'"><p>${qari.name.split(' ')[0]}</p>`;
+          container.appendChild(div);
+        }
+      });
+    }
+
+    function loadHomeNewReciters() {
+      const container = document.getElementById('homeNewReciters');
+      container.innerHTML = '';
+      qaris.slice(2, 5).forEach(qari => {
+        const div = document.createElement('div');
+        div.className = 'new-reciter-item';
+        div.onclick = () => openQariProfile(qari.id);
+        div.innerHTML = `<div class="new-badge">NEW</div><img src="${qari.img}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3023/3023274.png'"><p>${qari.name}</p>`;
+        container.appendChild(div);
+      });
+    }
+
+    function loadRecitersPage() {
+      const newContainer = document.getElementById('newRecitersList');
+      newContainer.innerHTML = '';
+      qaris.slice(2, 6).forEach(qari => {
+        const div = document.createElement('div');
+        div.className = 'new-reciter-item';
+        div.onclick = () => openQariProfile(qari.id);
+        div.innerHTML = `<div class="new-badge">NEW</div><img src="${qari.img}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3023/3023274.png'"><p>${qari.name}</p>`;
+        newContainer.appendChild(div);
+      });
+
+      const allContainer = document.getElementById('allRecitersList');
+      allContainer.innerHTML = '';
+      qaris.forEach(qari => {
+        const div = document.createElement('div');
+        div.className = 'surah-item glass';
+        div.onclick = () => openQariProfile(qari.id);
+        div.innerHTML = `<div class="surah-left"><img src="${qari.img}" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3023/3023274.png'"><div class="surah-info"><h3>${qari.name}</h3><p>${qari.total} Surahs Available</p></div></div><i class="fas fa-chevron-right"></i>`;
+        allContainer.appendChild(div);
+      });
+    }
+
+    function performSearch() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const results = document.getElementById('searchResults');
+      results.innerHTML = '';
+      qaris.filter(q => q.name.toLowerCase().includes(query)).forEach(qari => {
+        const div = document.createElement('div');
+        div.className = 'surah-item glass';
+        div.onclick = () => openQariProfile(qari.id);
+        div.innerHTML = `<div class="surah-left"><img src="${qari.img}" style="width: 40px; height: 40px; border-radius: 50%;" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3023/3023274.png'"><div class="surah-info"><h3>${qari.name}</h3></div></div>`;
+        results.appendChild(div);
+      });
+    }
+
+    // 4. PROFILE & FAVORITES
+    function openQariProfile(qariId) {
+      const qari = qaris.find(q => q.id === qariId);
+      currentQari = qari;
+      document.getElementById('profileImg').src = qari.img;
+      document.getElementById('profileImg').onerror = function() { this.src = 'https://cdn-icons-png.flaticon.com/512/3023/3023274.png'; };
+      document.getElementById('profileName').innerText = qari.name;
+      document.getElementById('profileSurahCount').innerText = `${qari.total} Surahs recorded`;
+
+      const listDiv = document.getElementById('profileSurahList');
+      listDiv.innerHTML = '';
+      for (let i = 0; i < qari.total; i++) {
+        const num = i + 1;
+        const name = allSurahs[i];
+        const isFav = favorites.some(f => f.qariId === qari.id && f.surahNum === num);
+        const div = document.createElement('div');
+        div.className = 'surah-item glass';
+        div.onclick = (e) => { if(e.target.tagName !== 'I') playSurah(num, name); };
+        div.innerHTML = `<div class="surah-left"><span class="surah-number">${num}</span><div class="surah-info"><h3>${name}</h3></div></div><div class="action-icons"><i class="${isFav ? 'fas' : 'far'} fa-star ${isFav ? 'active' : ''}" onclick="event.stopPropagation(); toggleFavorite(${num}, '${name}', this)"></i><i class="fas fa-play"></i></div>`;
+        listDiv.appendChild(div);
+      }
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-profile').classList.add('active');
+      window.scrollTo(0, 0);
+    }
+
+    function toggleFavorite(surahNum, surahName, iconElement) {
+      const qariId = currentQari.id;
+      const index = favorites.findIndex(f => f.qariId === qariId && f.surahNum === surahNum);
+      if (index > -1) { favorites.splice(index, 1); iconElement.className = 'far fa-star'; } 
+      else { favorites.push({ qariId, qariName: currentQari.name, surahNum, surahName, img: currentQari.img }); iconElement.className = 'fas fa-star active'; }
+      localStorage.setItem('quranFavorites', JSON.stringify(favorites));
+      updateFavIcon();
+      loadHomeFavorites();
+    }
+
+    function updateFavIcon() {
+      const isFav = favorites.some(f => f.qariId === currentQari?.id && f.surahNum === currentSurahIndex);
+      const icon = document.getElementById('fullStarIcon');
+      if(isFav) { icon.className = 'fas fa-star star-icon active'; } else { icon.className = 'far fa-star star-icon'; }
+    }
+
+    function toggleFavoriteCurrent() {
+      if(!currentQari) return;
+      const isFav = favorites.some(f => f.qariId === currentQari.id && f.surahNum === currentSurahIndex);
+      const icon = document.getElementById('fullStarIcon');
+      if(isFav) { favorites = favorites.filter(f => !(f.qariId === currentQari.id && f.surahNum === currentSurahIndex)); icon.className = 'far fa-star star-icon'; } 
+      else { favorites.push({ qariId: currentQari.id, qariName: currentQari.name, surahNum: currentSurahIndex, surahName: allSurahs[currentSurahIndex-1], img: currentQari.img }); icon.className = 'fas fa-star star-icon active'; }
+      localStorage.setItem('quranFavorites', JSON.stringify(favorites));
+      loadHomeFavorites();
+    }
+
+    function showFavorites() {
+      const list = document.getElementById('favoritesList');
+      list.innerHTML = '';
+      if(favorites.length === 0) { list.innerHTML = '<p style="text-align:center; color:#888; margin-top:20px;">No favorites yet.</p>'; } 
+      else {
+        favorites.forEach((fav, index) => {
+          const div = document.createElement('div');
+          div.className = 'surah-item glass';
+          div.onclick = () => { currentQari = qaris.find(q => q.id === fav.qariId); playSurah(fav.surahNum, fav.surahName); };
+          div.innerHTML = `<div class="surah-left"><img src="${fav.img}" style="width: 40px; height: 40px; border-radius: 50%;" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3023/3023274.png'"><div class="surah-info"><h3>${fav.surahName}</h3><p>${fav.qariName}</p></div></div><i class="fas fa-trash" style="color: #ff5252;" onclick="event.stopPropagation(); removeFav(${index})"></i>`;
+          list.appendChild(div);
+        });
+      }
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-favorites').classList.add('active');
+    }
+
+    function removeFav(index) {
+      favorites.splice(index, 1);
+      localStorage.setItem('quranFavorites', JSON.stringify(favorites));
+      showFavorites();
+      loadHomeFavorites();
+    }
+
+    // 5. PLAYER & CAPTIONS
+    function playSurah(surahNumber, surahName) {
+      const qari = currentQari;
+      currentSurahIndex = surahNumber;
+      const formattedNumber = String(surahNumber).padStart(3, '0');
+      audio.src = `${qari.server}${formattedNumber}.mp3`; 
+      audio.play();
+      
+      recentPlay = { qariId: qari.id, qariName: qari.name, surahNum: surahNumber, surahName: surahName, img: qari.img };
+      localStorage.setItem('recentPlay', JSON.stringify(recentPlay));
+      checkRecentlyPlayed();
+      
+      document.getElementById('miniPlayer').style.display = 'flex';
+      document.getElementById('miniImg').src = qari.img;
+      document.getElementById('miniTitle').innerText = surahName;
+      document.getElementById('miniReciter').innerText = qari.name;
+      document.getElementById('fullImg').src = qari.img;
+      document.getElementById('fullSurahName').innerText = surahName;
+      document.getElementById('fullReciterName').innerText = qari.name;
+      document.getElementById('playIcon').className = 'fas fa-pause';
+      document.getElementById('miniPlayIcon').className = 'fas fa-pause';
+      
+      updateFavIcon();
+      buildQueue();
+      fetchQuranText(surahNumber);
+    }
+
+    function fetchQuranText(surahNum) {
+      const textDiv = document.getElementById('arabicText');
+      textDiv.innerText = "Loading Captions...";
+      textDiv.classList.remove('glow');
+      
+      fetch(`https://api.alquran.cloud/v1/surah/${surahNum}/ar.alafasy`).then(res => res.json()).then(data => {
+        if(data.code === 200) { 
+          currentAyahs = data.data.ayahs; 
+          currentAyahIndex = 0;
+          showCurrentAyah();
+        }
+      }).catch(() => { textDiv.innerText = "Error loading captions."; });
+    }
+
+    function showCurrentAyah() {
+      const textDiv = document.getElementById('arabicText');
+      if(currentAyahIndex < currentAyahs.length) {
+        textDiv.classList.remove('glow');
+        textDiv.innerText = currentAyahs[currentAyahIndex].text;
+        setTimeout(() => { textDiv.classList.add('glow'); }, 50);
+      } else {
+        textDiv.innerText = "Surah Completed";
+      }
+    }
+
+    audio.addEventListener('timeupdate', () => {
+      if(audio.duration && currentAyahs.length > 0) {
+        const percent = (audio.currentTime / audio.duration) * 100;
+        document.getElementById('progressFill').style.width = percent + '%';
+        document.getElementById('currentTime').innerText = formatTime(audio.currentTime);
+
+        let approximateIndex = Math.floor((audio.currentTime / audio.duration) * currentAyahs.length);
+        if(approximateIndex >= currentAyahs.length) approximateIndex = currentAyahs.length - 1;
+
+        if(approximateIndex !== currentAyahIndex) {
+          currentAyahIndex = approximateIndex;
+          showCurrentAyah();
+        }
+      }
+    });
+
+    audio.addEventListener('loadedmetadata', () => { document.getElementById('totalTime').innerText = formatTime(audio.duration); });
+
+    function toggleTextArea() {
+      isTextVisible = !isTextVisible;
+      const textArea = document.getElementById('textDisplayArea');
+      const toggleBtn = document.getElementById('textToggleBtn');
+      if(isTextVisible) { textArea.style.display = 'flex'; toggleBtn.classList.add('active'); } 
+      else { textArea.style.display = 'none'; toggleBtn.classList.remove('active'); }
+    }
+
+    function togglePlay() {
+      if (!audio.src) return;
+      if (audio.paused) { 
+        audio.play(); if(bgAudio.src) bgAudio.play();
+        document.getElementById('playIcon').className = 'fas fa-pause';
+        document.getElementById('miniPlayIcon').className = 'fas fa-pause';
+      } else { 
+        audio.pause(); if(bgAudio.src) bgAudio.pause();
+        document.getElementById('playIcon').className = 'fas fa-play';
+        document.getElementById('miniPlayIcon').className = 'fas fa-play';
+      }
+    }
+
+    function playNext() { if(currentQari && currentSurahIndex < currentQari.total) playSurah(currentSurahIndex + 1, allSurahs[currentSurahIndex]); }
+    function playPrev() { if(currentQari && currentSurahIndex > 1) playSurah(currentSurahIndex - 1, allSurahs[currentSurahIndex - 2]); }
+
+    // 6. PLAYER UI & SWIPE
+    function openFullPlayer() { 
+      if(audio.src) { 
+        document.getElementById('fullPlayer').classList.add('active'); 
+        document.getElementById('bottomNav').classList.add('hidden'); 
+      } 
+    }
+    
+    function closeFullPlayer() { 
+      document.getElementById('fullPlayer').classList.remove('active'); 
+      document.getElementById('bottomNav').classList.remove('hidden'); 
+    }
+
+    function handleTouchStart(e) { touchStartY = e.touches[0].clientY; }
+    function handleTouchEnd(e) {
+      let touchEndY = e.changedTouches[0].clientY;
+      if (touchEndY - touchStartY > 100) { closeFullPlayer(); } 
+    }
+
+    // 7. MODALS & SEEK
+    function toggleModal(id) { document.getElementById(id).classList.toggle('active'); }
+    function setSpeed(speed) { audio.playbackRate = speed; document.getElementById('speedBtn').innerText = speed + 'x'; toggleModal('modalSpeed'); }
+    
+    function setSleep(minutes) {
+      if(sleepTimer) clearTimeout(sleepTimer);
+      if(minutes === 0) { alert("Sleep timer OFF"); } 
+      else {
+        sleepTimer = setTimeout(() => { audio.pause(); if(bgAudio.src) bgAudio.pause(); document.getElementById('playIcon').className = 'fas fa-play'; document.getElementById('miniPlayIcon').className = 'fas fa-play'; alert("Sleep timer ended."); }, minutes * 60 * 1000);
+        alert(`Sleep timer set for ${minutes} mins.`);
+      }
+      toggleModal('modalSleep');
+    }
+
+    function seekAudio(e) {
+      e.preventDefault();
+      const bar = document.getElementById('progressBar');
+      const rect = bar.getBoundingClientRect();
+      let clientX = e.clientX;
+      if (e.changedTouches && e.changedTouches.length > 0) clientX = e.changedTouches[0].clientX;
+      let percent = (clientX - rect.left) / rect.width;
+      percent = Math.max(0, Math.min(1, percent));
+      if(audio.duration) { audio.currentTime = percent * audio.duration; document.getElementById('progressFill').style.width = (percent * 100) + '%'; }
+    }
+
+    function formatTime(s) { if(isNaN(s)) return "00:00"; const m = Math.floor(s / 60); const sec = Math.floor(s % 60); return `${m < 10 ? '0' : ''}${m}:${sec < 10 ? '0' : ''}${sec}`; }
+
+    // 8. QUEUE & SOUNDS
+    function buildQueue() {
+      const list = document.getElementById('queueList');
+      list.innerHTML = '';
+      if(!currentQari) return;
+      for (let i = 0; i < currentQari.total; i++) {
+        const div = document.createElement('div');
+        div.className = 'surah-item glass';
+        div.onclick = () => { playSurah(i+1, allSurahs[i]); toggleModal('modalQueue'); };
+        div.innerHTML = `<div class="surah-left"><span class="surah-number">${i+1}</span><div class="surah-info"><h3>${allSurahs[i]}</h3></div></div><i class="fas fa-play"></i>`;
+        list.appendChild(div);
+      }
+    }
+
+    function renderSounds() {
+      const grid = document.getElementById('soundGrid');
+      grid.innerHTML = '';
+      soundsList.forEach(sound => {
+        const div = document.createElement('div');
+        div.className = `sound-item ${currentSoundId === sound.id ? 'selected' : ''}`;
+        div.onclick = () => selectSound(sound);
+        div.innerHTML = `<i class="fas ${sound.icon}"></i><p>${sound.name}</p>`;
+        grid.appendChild(div);
+      });
+    }
+
+    function openSoundsPage() { document.getElementById('page-sounds').classList.add('active'); }
+    function closeSoundsPage() { document.getElementById('page-sounds').classList.remove('active'); }
+
+    function selectSound(sound) {
+      currentSoundId = sound.id;
+      renderSounds();
+      document.getElementById('currentSoundIcon').className = `fas ${sound.icon}`;
+      document.getElementById('currentSoundText').innerText = sound.name;
+
+      const bgDiv = document.getElementById('player-animation-bg');
+      bgDiv.className = ''; 
+      
+      if (sound.id === 'none') {
+        bgAudio.pause();
+        bgAudio.src = '';
+      } else {
+        bgAudio.src = sound.url;
+        bgAudio.volume = 0.5;
+        bgAudio.play();
+        bgDiv.classList.add(sound.bgClass);
+      }
+      closeSoundsPage();
+    }
+
+    // 9. NAVIGATION
+    function switchTab(tabId, element) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-' + tabId).classList.add('active');
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+      element.classList.add('active');
+      window.scrollTo(0, 0);
+    }
+
+    function goBackHome() {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-home').classList.add('active');
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+      document.getElementById('nav-home').classList.add('active');
+    }
+
+    // START APP
+    init();
+  </script>
+</body>
+</html>

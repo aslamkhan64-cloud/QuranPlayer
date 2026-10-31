@@ -1,0 +1,6 @@
+{
+  "name": "QuranPlayer",
+  "description": "QuranPlayer app for daily recitation with audio playback, bookmarking, reciters, sleep timer, and ambient background sounds.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

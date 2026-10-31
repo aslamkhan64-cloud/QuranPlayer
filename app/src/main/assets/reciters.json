@@ -1,0 +1,1954 @@
+[
+  {
+    "id": "1",
+    "name": "Ibrahim Al-Akdar",
+    "arabicName": "إبراهيم الأخضر",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ibrahim-akhdar/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "10",
+    "name": "Akram Alalaqmi",
+    "arabicName": "أكرم العلاقمي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/akram-alaqmi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "100",
+    "name": "Majed Al-Enezi",
+    "arabicName": "ماجد العنزي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/majed-anazi/r1/",
+    "totalSurahs": 113,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "102",
+    "name": "Maher Al Meaqli",
+    "arabicName": "ماهر المعيقلي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/maher-muaiqly/r3/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Almusshaf Al Mojawwad"
+  },
+  {
+    "id": "104",
+    "name": "Mohammad Al-Airawy",
+    "arabicName": "محمد الأيراوي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-iraoui/r1/",
+    "totalSurahs": 111,
+    "style": "Rewayat Warsh A'n Nafi' Men Tariq Alazraq - Murattal"
+  },
+  {
+    "id": "105",
+    "name": "Mohammed Al-Barrak",
+    "arabicName": "محمد البراك",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-barrak/r1/",
+    "totalSurahs": 63,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "106",
+    "name": "Mohammad Al-Tablaway",
+    "arabicName": "محمد الطبلاوي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-tablawi/r2/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Almusshaf Al Mojawwad"
+  },
+  {
+    "id": "107",
+    "name": "Mohammed Al-Lohaidan",
+    "arabicName": "محمد اللحيدان",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-luhaidan/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "108",
+    "name": "Mohammed Al-Muhasny",
+    "arabicName": "محمد المحيسني",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-muhaisni/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "109",
+    "name": "Mohammed Ayyub",
+    "arabicName": "محمد أيوب",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-ayyub/r2/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Featured Recitation"
+  },
+  {
+    "id": "11",
+    "name": "Alhusayni Al-Azazi",
+    "arabicName": "الحسيني العزازي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/husayni-azazi/r1/",
+    "totalSurahs": 57,
+    "style": "Rewayat Hafs A'n Assem - Almusshaf Al Mo'lim"
+  },
+  {
+    "id": "110",
+    "name": "Mohammad Saleh Alim Shah",
+    "arabicName": "محمد صالح عالم شاه",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-shah/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "111",
+    "name": "Mohammed Jibreel",
+    "arabicName": "محمد جبريل",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-jibreel/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "112",
+    "name": "Mohammed Siddiq Al-Minshawi",
+    "arabicName": "محمد صديق المنشاوي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-minshawi/r4/",
+    "totalSurahs": 110,
+    "style": "Rewayat Hafs A'n Assem - Recorded in 1387 AH (1967 CE)"
+  },
+  {
+    "id": "115",
+    "name": "Mohammad Abdullkarem",
+    "arabicName": "محمد عبدالكريم",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-abdulkareem/r2/",
+    "totalSurahs": 114,
+    "style": "Rewayat Warsh A'n Nafi' Men  Tariq Abi Baker Alasbahani - Murattal"
+  },
+  {
+    "id": "116",
+    "name": "Mohammad Al-Abdullah",
+    "arabicName": "محمد عبدالحكيم سعيد العبدالله",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-abdullah/r2/",
+    "totalSurahs": 114,
+    "style": "Rewayat AlDorai A'n Al-Kisa'ai - Murattal"
+  },
+  {
+    "id": "118",
+    "name": "Mahmoud Khalil Al-Hussary",
+    "arabicName": "محمود خليل الحصري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/mahmoud-husary/r5/",
+    "totalSurahs": 114,
+    "style": "Rewayat Qalon A'n Nafi' - Murattal"
+  },
+  {
+    "id": "12",
+    "name": "Idrees Abkr",
+    "arabicName": "إدريس أبكر",
+    "serverUrl": "https://cdn.mp3quran.net/audio/idrees-abkar/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "121",
+    "name": "Mahmoud Ali  Albanna",
+    "arabicName": "محمود علي البنا",
+    "serverUrl": "https://cdn.mp3quran.net/audio/mahmoud-banna/r2/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Almusshaf Al Mojawwad"
+  },
+  {
+    "id": "123",
+    "name": "Mishary Alafasi",
+    "arabicName": "مشاري العفاسي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/mishary-alafasy/r2/",
+    "totalSurahs": 6,
+    "style": "Rewayat AlDorai A'n Al-Kisa'ai - Murattal"
+  },
+  {
+    "id": "125",
+    "name": "Mustafa Ismail",
+    "arabicName": "مصطفى إسماعيل",
+    "serverUrl": "https://cdn.mp3quran.net/audio/mustafa-ismail/r2/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Almusshaf Al Mojawwad"
+  },
+  {
+    "id": "126",
+    "name": "Mustafa Al-Lahoni",
+    "arabicName": "مصطفى اللاهوني",
+    "serverUrl": "https://cdn.mp3quran.net/audio/mustafa-lahouni/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "127",
+    "name": "Mustafa raad Alazawy",
+    "arabicName": "مصطفى رعد العزاوي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/mustafa-azzawi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "128",
+    "name": "Muamar (From Indonesia)",
+    "arabicName": "معمر الأندونيسي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muammar-za/r1/",
+    "totalSurahs": 8,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "129",
+    "name": "Muftah Alsaltany",
+    "arabicName": "مفتاح السلطني",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muftah-saltani/r5/",
+    "totalSurahs": 114,
+    "style": "Ibn Thakwan A'n Ibn Amer - Murattal"
+  },
+  {
+    "id": "13",
+    "name": "Alzain Mohammad Ahmad",
+    "arabicName": "الزين محمد أحمد",
+    "serverUrl": "https://cdn.mp3quran.net/audio/zain-ahmad/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "134",
+    "name": "Mohammad Saayed",
+    "arabicName": "محمد سايد",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-saayed/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Warsh A'n Nafi' - Murattal"
+  },
+  {
+    "id": "135",
+    "name": "Abdulrahman Alsuwayid",
+    "arabicName": "عبدالرحمن السويّد",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulrahman-suwayid/r1/",
+    "totalSurahs": 113,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "136",
+    "name": "Abdulelah bin Aoun",
+    "arabicName": "عبدالإله بن عون",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulelah-aoun/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "137",
+    "name": "Ahmad Talib bin Humaid",
+    "arabicName": "أحمد طالب بن حميد",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ahmad-humaid/r1/",
+    "totalSurahs": 107,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "138",
+    "name": "Noreen Mohammad Siddiq",
+    "arabicName": "نورين محمد صديق",
+    "serverUrl": "https://cdn.mp3quran.net/audio/noreen-siddiq/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Aldori A'n Abi Amr - Murattal"
+  },
+  {
+    "id": "139",
+    "name": "Majed Al-Zamil",
+    "arabicName": "ماجد الزامل",
+    "serverUrl": "https://cdn.mp3quran.net/audio/majed-zamil/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "14",
+    "name": "Al-Qaria Yassen",
+    "arabicName": "القارئ ياسين",
+    "serverUrl": "https://cdn.mp3quran.net/audio/yassen-jazairi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Warsh A'n Nafi' - Murattal"
+  },
+  {
+    "id": "149",
+    "name": "Maher Shakhashero",
+    "arabicName": "ماهر شخاشيرو",
+    "serverUrl": "https://cdn.mp3quran.net/audio/maher-shakhashiro/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "15",
+    "name": "Alashri Omran",
+    "arabicName": "العشري عمران",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ashri-omran/r1/",
+    "totalSurahs": 113,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "150",
+    "name": "Mohammad AlMonshed",
+    "arabicName": "محمد المنشد",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-monshed/r1/",
+    "totalSurahs": 110,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "151",
+    "name": "Mahmood AlSheimy",
+    "arabicName": "محمود الشيمي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/mahmoud-sheimy/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat AlDorai A'n Al-Kisa'ai - Murattal"
+  },
+  {
+    "id": "152",
+    "name": "Yasser Salamah",
+    "arabicName": "ياسر سلامة",
+    "serverUrl": "https://cdn.mp3quran.net/audio/yasser-salama/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "153",
+    "name": "Akhil Abdulhayy Rawa",
+    "arabicName": "أخيل عبدالحي روا",
+    "serverUrl": "https://cdn.mp3quran.net/audio/akhil-rawa/r1/",
+    "totalSurahs": 4,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "154",
+    "name": "Ustaz Zamri",
+    "arabicName": "أستاذ زامري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/zamri-abdullah/r1/",
+    "totalSurahs": 7,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "159",
+    "name": "Khalid Almohana",
+    "arabicName": "خالد المهنا",
+    "serverUrl": "https://cdn.mp3quran.net/audio/khalid-mohanna/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "16",
+    "name": "Aloyoon Al-Koshi",
+    "arabicName": "العيون الكوشي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/laayoun-kouchi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Warsh A'n Nafi' - Murattal"
+  },
+  {
+    "id": "160",
+    "name": "Adel Al-Khalbany",
+    "arabicName": "عادل الكلباني",
+    "serverUrl": "https://cdn.mp3quran.net/audio/adel-kalbani/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "161",
+    "name": "Mousa Bilal",
+    "arabicName": "موسى بلال",
+    "serverUrl": "https://cdn.mp3quran.net/audio/musa-bilal/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "162",
+    "name": "Hussain Alshaik",
+    "arabicName": "حسين آل الشيخ",
+    "serverUrl": "https://cdn.mp3quran.net/audio/hussain-sheikh/r1/",
+    "totalSurahs": 59,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "163",
+    "name": "Hatem Fareed Alwaer",
+    "arabicName": "حاتم فريد الواعر",
+    "serverUrl": "https://cdn.mp3quran.net/audio/hatem-waer/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "164",
+    "name": "Ibrahim Aljormy",
+    "arabicName": "إبراهيم الجرمي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ibrahim-jormy/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "165",
+    "name": "Mahmood Al rifai",
+    "arabicName": "محمود الرفاعي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/mahmoud-rifai/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "166",
+    "name": "Nasser Al obaid",
+    "arabicName": "ناصر العبيد",
+    "serverUrl": "https://cdn.mp3quran.net/audio/nasser-obaid/r1/",
+    "totalSurahs": 67,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "167",
+    "name": "Wasel Almethen",
+    "arabicName": "واصل المذن",
+    "serverUrl": "https://cdn.mp3quran.net/audio/wasel-methen/r1/",
+    "totalSurahs": 9,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "17",
+    "name": "Tawfeeq As-Sayegh",
+    "arabicName": "توفيق الصايغ",
+    "serverUrl": "https://cdn.mp3quran.net/audio/tawfeeq-sayegh/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "178",
+    "name": "Ibrahim Aldosari",
+    "arabicName": "إبراهيم الدوسري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ibrahim-dosari/r2/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "18",
+    "name": "Jamal Shaker Abdullah",
+    "arabicName": "جمال شاكر عبدالله",
+    "serverUrl": "https://cdn.mp3quran.net/audio/jamal-abdullah/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "181",
+    "name": "Jamaan Alosaimi",
+    "arabicName": "جمعان العصيمي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/jamaan-osaimi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "183",
+    "name": "Rodziah Abdulrahman",
+    "arabicName": "رضية عبدالرحمن",
+    "serverUrl": "https://cdn.mp3quran.net/audio/rodziah-abdulrahman/r1/",
+    "totalSurahs": 4,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "184",
+    "name": "Rogayah Sulong",
+    "arabicName": "رقية سولونق",
+    "serverUrl": "https://cdn.mp3quran.net/audio/rogayah-sulong/r1/",
+    "totalSurahs": 1,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "185",
+    "name": "Sapinah Mamat",
+    "arabicName": "سابينة مامات",
+    "serverUrl": "https://cdn.mp3quran.net/audio/sapinah-mamat/r1/",
+    "totalSurahs": 4,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "187",
+    "name": "Saidin Abdulrahman",
+    "arabicName": "سيدين عبدالرحمن",
+    "serverUrl": "https://cdn.mp3quran.net/audio/saidin-abdulrahman/r1/",
+    "totalSurahs": 4,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "188",
+    "name": "Abdulghani Abdullah",
+    "arabicName": "عبدالغني عبدالله",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulghani-abdullah/r1/",
+    "totalSurahs": 13,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "189",
+    "name": "Abdullah Fahmi",
+    "arabicName": "عبدالله فهمي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdullah-fahmi/r1/",
+    "totalSurahs": 4,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "19",
+    "name": "Hamad Al Daghriri",
+    "arabicName": "حمد الدغريري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/hamad-daghriri/r1/",
+    "totalSurahs": 88,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "190",
+    "name": "Muhammad Al-Hafiz",
+    "arabicName": "محمد الحافظ",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-hafiz/r1/",
+    "totalSurahs": 3,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "191",
+    "name": "Mohammed Hafas Ali",
+    "arabicName": "محمد حفص علي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-ali/r1/",
+    "totalSurahs": 5,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "192",
+    "name": "Muhammed Khairul Anuar",
+    "arabicName": "محمد خير النور",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-anuar/r1/",
+    "totalSurahs": 4,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "193",
+    "name": "Yousef Bin Noah Ahmad",
+    "arabicName": "يوسف بن نوح أحمد",
+    "serverUrl": "https://cdn.mp3quran.net/audio/yousef-ahmad/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "194",
+    "name": "Jamal Addeen Alzailaie",
+    "arabicName": "جمال الدين الزيلعي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/jamaluddin-zailai/r1/",
+    "totalSurahs": 8,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "197",
+    "name": "Moeedh Alharthi",
+    "arabicName": "معيض الحارثي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/moeedh-harthi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "198",
+    "name": "Mohammad Rashad Alshareef",
+    "arabicName": "محمد رشاد الشريف",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-shareef/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "2",
+    "name": "Ibrahim Al-Jebreen",
+    "arabicName": "إبراهيم الجبرين",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ibrahim-jibreen/r1/",
+    "totalSurahs": 107,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "20",
+    "name": "Khalid Al-Jileel",
+    "arabicName": "خالد الجليل",
+    "serverUrl": "https://cdn.mp3quran.net/audio/khalid-jalil/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "201",
+    "name": "Ahmed Al-trabulsi",
+    "arabicName": "أحمد الطرابلسي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ahmad-tarabulsi/r2/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "202",
+    "name": "Abdullah Al-Kandari",
+    "arabicName": "عبدالله الكندري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdullah-kandari/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "203",
+    "name": "Ahmed Amer",
+    "arabicName": "أحمد عامر",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ahmad-amer/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "204",
+    "name": "Ibrahem Assadan",
+    "arabicName": "إبراهيم السعدان",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ibrahim-saadan/r1/",
+    "totalSurahs": 50,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "205",
+    "name": "Ahmad Alhuthaifi",
+    "arabicName": "أحمد الحذيفي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ahmad-hudhaifi/r1/",
+    "totalSurahs": 110,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "206",
+    "name": "Mohammed Osman Khan",
+    "arabicName": "محمد عثمان خان",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-khan/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "207",
+    "name": "Youssef Edghouch",
+    "arabicName": "يوسف الدغوش",
+    "serverUrl": "https://cdn.mp3quran.net/audio/youssef-edghouch/r1/",
+    "totalSurahs": 26,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "208",
+    "name": "Addokali Mohammad Alalim",
+    "arabicName": "الدوكالي محمد العالم",
+    "serverUrl": "https://cdn.mp3quran.net/audio/dokali-alim/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Qalon A'n Nafi' - Murattal"
+  },
+  {
+    "id": "209",
+    "name": "Wishear Hayder Arbili",
+    "arabicName": "وشيار حيدر اربيلي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/wishear-arbili/r1/",
+    "totalSurahs": 2,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "21",
+    "name": "Khaled Al-Qahtani",
+    "arabicName": "خالد القحطاني",
+    "serverUrl": "https://cdn.mp3quran.net/audio/khalid-qahtani/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "211",
+    "name": "Alfateh Alzubair",
+    "arabicName": "الفاتح محمد الزبير",
+    "serverUrl": "https://cdn.mp3quran.net/audio/fateh-zubair/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Aldori A'n Abi Amr - Murattal"
+  },
+  {
+    "id": "21136",
+    "name": "Abdullah Alqarafi",
+    "arabicName": "عبدالله القرافي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdullah-qarafi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "21148",
+    "name": "Abdulbadi Ghailan",
+    "arabicName": "عبدالبديع غيلان",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulbadi-ghailan/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "21181",
+    "name": "Muhammad Burhaji",
+    "arabicName": "محمد برهجي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-burhaji/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "21182",
+    "name": "Yusuf ALaidroos",
+    "arabicName": "يوسف العيدروس",
+    "serverUrl": "https://cdn.mp3quran.net/audio/yousef-aidarous/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Featured Recitation"
+  },
+  {
+    "id": "21183",
+    "name": "Hassan Aldaghriri",
+    "arabicName": "حسن الدغريري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/hassan-daghriri/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "21184",
+    "name": "Muhammad Al Faqih",
+    "arabicName": "محمد الفقيه",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-faqih/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "21186",
+    "name": "Junaid Adam Abdullah",
+    "arabicName": "جنيد آدم عبدالله",
+    "serverUrl": "https://cdn.mp3quran.net/audio/junaid-abdullah/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "21187",
+    "name": "Khalid Alziyadi",
+    "arabicName": "خالد الزيادي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/khalid-ziyadi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "21188",
+    "name": "Alwaleed Alshamsan",
+    "arabicName": "الوليد الشمسان",
+    "serverUrl": "https://cdn.mp3quran.net/audio/waleed-shamsan/r1/",
+    "totalSurahs": 71,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "21191",
+    "name": "Ibrahim Al-Shahri",
+    "arabicName": "إبراهيم الشهري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ibrahim-shahri/r1/",
+    "totalSurahs": 113,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "21193",
+    "name": "Abdul Rahman bin Abdul Razzaq Al Badr",
+    "arabicName": "عبدالرحمن بن عبدالرزاق البدر",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulrahman-badr/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "21196",
+    "name": "Alijon Qori",
+    "arabicName": "عليجان قوري حمدان",
+    "serverUrl": "https://cdn.mp3quran.net/audio/alijon-hamdan/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "21197",
+    "name": "Mohammed Al-Zubaidi",
+    "arabicName": "محمد الزبيدي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-zubaidi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "21199",
+    "name": "Abdelmoujib Benkirane",
+    "arabicName": "عبد المجيب بنكيران",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdelmoujib-benkirane/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Warsh A'n Nafi' - Murattal"
+  },
+  {
+    "id": "212",
+    "name": "Tareq Abdulgani daawob",
+    "arabicName": "طارق عبدالغني دعوب",
+    "serverUrl": "https://cdn.mp3quran.net/audio/tareq-daawob/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Qalon A'n Nafi' - Murattal"
+  },
+  {
+    "id": "21200",
+    "name": "Mohammad Dibirov",
+    "arabicName": "محمد ديبيروف",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-dibirov/r1/",
+    "totalSurahs": 24,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "21201",
+    "name": "Asim Al-Luhaidan",
+    "arabicName": "عاصم اللحیدان",
+    "serverUrl": "https://cdn.mp3quran.net/audio/asim-luhaidan/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "21202",
+    "name": "Mahmoud Harfoush",
+    "arabicName": "محمود حرفوش",
+    "serverUrl": "https://cdn.mp3quran.net/audio/mahmoud-harfoush/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "21203",
+    "name": "Ayman Rushdi Swaid",
+    "arabicName": "أيمن رشدي سويد",
+    "serverUrl": "https://server15.mp3quran.net/a-rushdi/Almusshaf-Al-Mo-lim/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Almusshaf Al Mo'lim"
+  },
+  {
+    "id": "21204",
+    "name": "Mustapha Gharbi",
+    "arabicName": "مصطفى غربي",
+    "serverUrl": "https://server15.mp3quran.net/m-gharbi/Rewayat-Warsh-A-n-Nafi/",
+    "totalSurahs": 114,
+    "style": "Rewayat Warsh A'n Nafi' - Murattal"
+  },
+  {
+    "id": "216",
+    "name": "Othman Al-Ansary",
+    "arabicName": "عثمان الأنصاري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/othman-ansari/r1/",
+    "totalSurahs": 76,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "217",
+    "name": "Bandar Balilah",
+    "arabicName": "بندر بليله",
+    "serverUrl": "https://cdn.mp3quran.net/audio/bandar-baleela/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "218",
+    "name": "Khalid Al-Shoraimy",
+    "arabicName": "خالد الشريمي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/khalid-shuraimi/r1/",
+    "totalSurahs": 73,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "219",
+    "name": "Wadeea Al-Yamani",
+    "arabicName": "وديع اليمني",
+    "serverUrl": "https://cdn.mp3quran.net/audio/wadee-yamani/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "22",
+    "name": "Khalid Abdulkafi",
+    "arabicName": "خالد عبدالكافي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/khalid-abdulkafi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "221",
+    "name": "Raad Al Kurdi",
+    "arabicName": "رعد محمد الكردي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/raad-kurdi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "225",
+    "name": "Abdulrahman Aloosi",
+    "arabicName": "عبدالرحمن العوسي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulrahman-oosi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "226",
+    "name": "Khalid Algamdi",
+    "arabicName": "خالد الغامدي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/khalid-ghamdi/r1/",
+    "totalSurahs": 102,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "227",
+    "name": "Ramadan Shakoor",
+    "arabicName": "رمضان شكور",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ramadan-shakoor/r1/",
+    "totalSurahs": 65,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "228",
+    "name": "Abdulmajeed Al-Arkani",
+    "arabicName": "عبدالمجيد الأركاني",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulmajeed-arkani/r1/",
+    "totalSurahs": 49,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "229",
+    "name": "Mohammad Khalil Al-Qari",
+    "arabicName": "محمد خليل القارئ",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-khalil/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "23",
+    "name": "Khalid Al-Wehabi",
+    "arabicName": "خالد الوهيبي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/khalid-wahaibi/r1/",
+    "totalSurahs": 25,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "230",
+    "name": "Rami Aldeais",
+    "arabicName": "رامي الدعيس",
+    "serverUrl": "https://cdn.mp3quran.net/audio/rami-duais/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "231",
+    "name": "Hazza Al-Balushi",
+    "arabicName": "هزاع البلوشي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/hazza-balushi/r1/",
+    "totalSurahs": 91,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "236",
+    "name": "Abdulrahman Al-Majed",
+    "arabicName": "عبدالرحمن الماجد",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulrahman-majed/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "237",
+    "name": "Marwan Alakri",
+    "arabicName": "مروان العكري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/marwan-akri/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Qalon A'n Nafi' - Murattal"
+  },
+  {
+    "id": "24",
+    "name": "Khalifa Altunaiji",
+    "arabicName": "خليفة الطنيجي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/khalifa-tunaiji/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "240",
+    "name": "Salman Alotaibi",
+    "arabicName": "سلمان العتيبي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/salman-otaibi/r1/",
+    "totalSurahs": 75,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "241",
+    "name": "Mohammad Refat",
+    "arabicName": "محمد رفعت",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-refaat/r1/",
+    "totalSurahs": 31,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "243",
+    "name": "Abdullah Al-Mousa",
+    "arabicName": "عبدالله الموسى",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdullah-mousa/r2/",
+    "totalSurahs": 38,
+    "style": "Rewayat Hafs A'n Assem - Almusshaf Al Mo'lim"
+  },
+  {
+    "id": "244",
+    "name": "Abdullah Al-Khalaf",
+    "arabicName": "عبدالله الخلف",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdullah-khalaf/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "245",
+    "name": "Mansour Al-Salemi",
+    "arabicName": "منصور السالمي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/mansour-salimi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "246",
+    "name": "Salah Musali",
+    "arabicName": "صلاح مصلي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/salah-musalli/r1/",
+    "totalSurahs": 49,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "247",
+    "name": "Khalid Alsharekh",
+    "arabicName": "خالد الشارخ",
+    "serverUrl": "https://cdn.mp3quran.net/audio/khalid-sharekh/r1/",
+    "totalSurahs": 64,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "248",
+    "name": "Nasser Alosfor",
+    "arabicName": "ناصر العصفور",
+    "serverUrl": "https://cdn.mp3quran.net/audio/nasser-asfour/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "25",
+    "name": "Dawood Hamza",
+    "arabicName": "داود حمزة",
+    "serverUrl": "https://cdn.mp3quran.net/audio/dawood-hamza/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "250",
+    "name": "Mohammad Albukheet",
+    "arabicName": "محمد البخيت",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-bukhait/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "251",
+    "name": "Nasser Almajed",
+    "arabicName": "ناصر الماجد",
+    "serverUrl": "https://cdn.mp3quran.net/audio/nasser-majed/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "252",
+    "name": "Ahmed Al-Swailem",
+    "arabicName": "أحمد السويلم",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ahmad-suwailem/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "253",
+    "name": "Islam Sobhi",
+    "arabicName": "إسلام صبحي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/islam-sobhi/r1/",
+    "totalSurahs": 109,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "254",
+    "name": "Bader Alturki",
+    "arabicName": "بدر التركي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/badr-turki/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "255",
+    "name": "Hitham Aljadani",
+    "arabicName": "هيثم الجدعاني",
+    "serverUrl": "https://cdn.mp3quran.net/audio/haitham-jadani/r1/",
+    "totalSurahs": 101,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "256",
+    "name": "Ahmad Shaheen",
+    "arabicName": "أحمد خليل شاهين",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ahmad-shaheen/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "257",
+    "name": "Saad Almqren",
+    "arabicName": "سعد المقرن",
+    "serverUrl": "https://cdn.mp3quran.net/audio/saad-muqrin/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "259",
+    "name": "Ahmad Al Nufais",
+    "arabicName": "أحمد النفيس",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ahmad-nufais/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "26",
+    "name": "Rasheed Ifrad",
+    "arabicName": "رشيد إفراد",
+    "serverUrl": "https://cdn.mp3quran.net/audio/rachid-ifrad/r1/",
+    "totalSurahs": 50,
+    "style": "Rewayat Warsh A'n Nafi' - Murattal"
+  },
+  {
+    "id": "260",
+    "name": "Omar Al Darweez",
+    "arabicName": "عمر الدريويز",
+    "serverUrl": "https://cdn.mp3quran.net/audio/omar-duraiwiz/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "263",
+    "name": "Abdulaziz Alasiri",
+    "arabicName": "عبدالعزيز العسيري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulaziz-asiri/r1/",
+    "totalSurahs": 72,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "264",
+    "name": "Younes Souilass",
+    "arabicName": "يونس اسويلص",
+    "serverUrl": "https://cdn.mp3quran.net/audio/younes-souilass/r1/",
+    "totalSurahs": 65,
+    "style": "Rewayat Warsh A'n Nafi' - Murattal"
+  },
+  {
+    "id": "265",
+    "name": "Ahmad Deban",
+    "arabicName": "أحمد ديبان",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ahmad-deeban/r13/",
+    "totalSurahs": 11,
+    "style": "Ibn Jammaz A'n Abi Ja'far - Murattal"
+  },
+  {
+    "id": "267",
+    "name": "Abdullah Kamel",
+    "arabicName": "عبدالله كامل",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdullah-kamel/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "268",
+    "name": "Peshawa Qadr Al-Kurdi",
+    "arabicName": "بيشه وا قادر الكردي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/peshawa-kurdi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "27",
+    "name": "Rachid Belalya",
+    "arabicName": "رشيد بلعالية",
+    "serverUrl": "https://cdn.mp3quran.net/audio/rachid-belalia/r2/",
+    "totalSurahs": 5,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "271",
+    "name": "Nathier Almalki",
+    "arabicName": "نذير المالكي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/nadhir-maliki/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "272",
+    "name": "Okasha Kameny",
+    "arabicName": "عكاشة كميني",
+    "serverUrl": "https://cdn.mp3quran.net/audio/okasha-kameny/r2/",
+    "totalSurahs": 114,
+    "style": "Rewayat Albizi A'n Ibn Katheer - Murattal"
+  },
+  {
+    "id": "273",
+    "name": "Haitham Aldukhain",
+    "arabicName": "هيثم الدخين",
+    "serverUrl": "https://cdn.mp3quran.net/audio/haitham-dukhain/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Featured Recitation"
+  },
+  {
+    "id": "274",
+    "name": "Muhammad Abu Sneina",
+    "arabicName": "محمد أبو سنينة",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-abusnaina/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Qalon A'n Nafi' - Murattal"
+  },
+  {
+    "id": "275",
+    "name": "Mohammed Al-Amin Qeniwa",
+    "arabicName": "محمد الأمين قنيوة",
+    "serverUrl": "https://cdn.mp3quran.net/audio/muhammad-qeniwa/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Qalon A'n Nafi' - Murattal"
+  },
+  {
+    "id": "277",
+    "name": "Mahmoud Abdul Hakam",
+    "arabicName": "محمود عبدالحكم",
+    "serverUrl": "https://cdn.mp3quran.net/audio/mahmoud-abdulhakam/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "278",
+    "name": "Ahmad Issa Al Maasaraawi",
+    "arabicName": "أحمد عيسى المعصراوي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ahmad-masarawi/r2/",
+    "totalSurahs": 64,
+    "style": "Rewayat Rowis and Rawh A'n Yakoob Al Hadrami  - Murattal"
+  },
+  {
+    "id": "279",
+    "name": "Ibrahim Kshidan",
+    "arabicName": "إبراهيم كشيدان",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ibrahim-kshidan/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Qalon A'n Nafi' - Murattal"
+  },
+  {
+    "id": "28",
+    "name": "Zakaria Hamamah",
+    "arabicName": "زكريا حمامة",
+    "serverUrl": "https://cdn.mp3quran.net/audio/zakaria-hamama/r1/",
+    "totalSurahs": 7,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "280",
+    "name": "Hashim Abu Dalal",
+    "arabicName": "هاشم أبو دلال",
+    "serverUrl": "https://cdn.mp3quran.net/audio/hashim-abudalal/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "281",
+    "name": "Fouad Alkhamery",
+    "arabicName": "فؤاد الخامري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/fouad-khamiri/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "282",
+    "name": "Sayed Ahmad Hashemi",
+    "arabicName": "سيد أحمد هاشمي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/sayed-hashemi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "283",
+    "name": "Khalid Mohammadi",
+    "arabicName": "خالد كريم محمدي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/khalid-mohammadi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "284",
+    "name": "Mal-Allah Abdulrhman Aljaber",
+    "arabicName": "مال الله عبدالرحمن الجابر",
+    "serverUrl": "https://cdn.mp3quran.net/audio/malallah-jaber/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "285",
+    "name": "Salman Alsadeiq",
+    "arabicName": "سلمان الصديق",
+    "serverUrl": "https://cdn.mp3quran.net/audio/salman-siddiq/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "286",
+    "name": "Hasan Saleh",
+    "arabicName": "حسن صالح",
+    "serverUrl": "https://cdn.mp3quran.net/audio/hassan-saleh/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "287",
+    "name": "Abdulrahman Alshahhat",
+    "arabicName": "عبدالرحمن الشحات",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulrahman-shahat/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "288",
+    "name": "Issa Omar Sanankoua",
+    "arabicName": "عيسى عمر سناكو",
+    "serverUrl": "https://cdn.mp3quran.net/audio/issa-sanankoua/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "289",
+    "name": "Haroon Baqai",
+    "arabicName": "هارون بقائي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/haroon-baqai/r1/",
+    "totalSurahs": 51,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "29",
+    "name": "Abdullah Bukhari",
+    "arabicName": "عبدالله بخاري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdullah-bukhari/r1/",
+    "totalSurahs": 79,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "290",
+    "name": "Saleh Alquraishi",
+    "arabicName": "صالح القريشي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/saleh-quraishi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "3",
+    "name": "Ibrahim Al-Asiri",
+    "arabicName": "إبراهيم العسيري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ibrahim-asiri/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "30",
+    "name": "Saad Al-Ghamdi",
+    "arabicName": "سعد الغامدي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/saad-ghamdi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "300",
+    "name": "Saleh Alshamrani",
+    "arabicName": "صالح الشمراني",
+    "serverUrl": "https://cdn.mp3quran.net/audio/saleh-shamrani/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "301",
+    "name": "Faisal Al-Hajry",
+    "arabicName": "فيصل الهاجري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/faisal-hajri/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "302",
+    "name": "Anas Alemadi",
+    "arabicName": "أنس العمادي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/anas-emadi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "303",
+    "name": "Abdulmalik Alaskar",
+    "arabicName": "عبدالملك العسكر",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulmalik-askar/r1/",
+    "totalSurahs": 7,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "304",
+    "name": "Abdulkareem Alhazmi",
+    "arabicName": "عبدالكريم الحازمي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulkareem-hazmi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "305",
+    "name": "Hicham Lharraz",
+    "arabicName": "هشام الهراز",
+    "serverUrl": "https://cdn.mp3quran.net/audio/hicham-lharraz/r1/",
+    "totalSurahs": 113,
+    "style": "Rewayat Warsh A'n Nafi' - Murattal"
+  },
+  {
+    "id": "306",
+    "name": "Abdullah Al-Mishal",
+    "arabicName": "عبدالله المشعل",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdullah-mishal/r1/",
+    "totalSurahs": 11,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "307",
+    "name": "Abdelaziz sheim",
+    "arabicName": "عبدالعزيز سحيم",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdelaziz-sheim/r1/",
+    "totalSurahs": 16,
+    "style": "Rewayat Warsh A'n Nafi' - Murattal"
+  },
+  {
+    "id": "31",
+    "name": "Saud Al-Shuraim",
+    "arabicName": "سعود الشريم",
+    "serverUrl": "https://cdn.mp3quran.net/audio/saud-shuraim/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "32",
+    "name": "Sahl Yassin",
+    "arabicName": "سهل ياسين",
+    "serverUrl": "https://cdn.mp3quran.net/audio/sahl-yassin/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "33",
+    "name": "Zaki Daghistani",
+    "arabicName": "زكي داغستاني",
+    "serverUrl": "https://cdn.mp3quran.net/audio/zaki-daghistani/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "34",
+    "name": "Sami Al-Hasn",
+    "arabicName": "سامي الحسن",
+    "serverUrl": "https://cdn.mp3quran.net/audio/sami-hassan/r1/",
+    "totalSurahs": 28,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "35",
+    "name": "Sami Al-Dosari",
+    "arabicName": "سامي الدوسري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/sami-dosari/r1/",
+    "totalSurahs": 53,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "36",
+    "name": "Sayeed Ramadan",
+    "arabicName": "سيد رمضان",
+    "serverUrl": "https://cdn.mp3quran.net/audio/sayed-ramadan/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "37",
+    "name": "Shaban Al-Sayiaad",
+    "arabicName": "شعبان الصياد",
+    "serverUrl": "https://cdn.mp3quran.net/audio/shaban-sayyad/r1/",
+    "totalSurahs": 65,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "38",
+    "name": "Shirazad Taher",
+    "arabicName": "شيرزاد عبدالرحمن طاهر",
+    "serverUrl": "https://cdn.mp3quran.net/audio/shirzad-taher/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "39",
+    "name": "Saber Abdulhakm",
+    "arabicName": "صابر عبدالحكم",
+    "serverUrl": "https://cdn.mp3quran.net/audio/saber-abdulhakam/r10/",
+    "totalSurahs": 114,
+    "style": "قالون عن نافع - بقصر المنفصل مع صلة ميم الجمع - Almusshaf Al Mojawwad"
+  },
+  {
+    "id": "4",
+    "name": "Shaik Abu Bakr Al Shatri",
+    "arabicName": "شيخ أبو بكر الشاطري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abubakr-shatri/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "40",
+    "name": "Saleh Alsahood",
+    "arabicName": "صالح الصاهود",
+    "serverUrl": "https://cdn.mp3quran.net/audio/saleh-sahood/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "41",
+    "name": "Saleh Al-Talib",
+    "arabicName": "صالح آل طالب",
+    "serverUrl": "https://cdn.mp3quran.net/audio/saleh-talib/r1/",
+    "totalSurahs": 32,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "42",
+    "name": "Saleh Al-Habdan",
+    "arabicName": "صالح الهبدان",
+    "serverUrl": "https://cdn.mp3quran.net/audio/saleh-habdan/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "43",
+    "name": "Salah Albudair",
+    "arabicName": "صلاح البدير",
+    "serverUrl": "https://cdn.mp3quran.net/audio/salah-budair/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "44",
+    "name": "Salah Alhashim",
+    "arabicName": "صلاح الهاشم",
+    "serverUrl": "https://cdn.mp3quran.net/audio/salah-hashim/r2/",
+    "totalSurahs": 7,
+    "style": "Rewayat Qalon A'n Nafi' - Murattal"
+  },
+  {
+    "id": "46",
+    "name": "Slaah Bukhatir",
+    "arabicName": "صلاح بو خاطر",
+    "serverUrl": "https://cdn.mp3quran.net/audio/salah-bukhatir/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "47",
+    "name": "Mukhtar Al-Haj",
+    "arabicName": "مختار الحاج",
+    "serverUrl": "https://cdn.mp3quran.net/audio/mukhtar-haj/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "48",
+    "name": "Adel Ryyan",
+    "arabicName": "عادل ريان",
+    "serverUrl": "https://cdn.mp3quran.net/audio/adel-rayyan/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "49",
+    "name": "Abdelbari Al-Toubayti",
+    "arabicName": "عبدالبارئ الثبيتي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulbari-thubaiti/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "5",
+    "name": "Ahmad Al-Ajmy",
+    "arabicName": "أحمد بن علي العجمي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ahmad-ajmi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "50",
+    "name": "Abdulbari Mohammad",
+    "arabicName": "عبدالبارئ محمد",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulbari-muhammad/r2/",
+    "totalSurahs": 91,
+    "style": "Rewayat Hafs A'n Assem - Almusshaf Al Mo'lim"
+  },
+  {
+    "id": "51",
+    "name": "Abdulbasit Abdulsamad",
+    "arabicName": "عبدالباسط عبدالصمد",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulbasit-abdulsamad/r3/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "54",
+    "name": "Abdulrahman Alsudaes",
+    "arabicName": "عبدالرحمن السديس",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulrahman-sudais/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "55",
+    "name": "Abdul Aziz Al-Ahmad",
+    "arabicName": "عبدالعزيز الأحمد",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulaziz-ahmad/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "56",
+    "name": "Abdulaziz Az-Zahrani",
+    "arabicName": "عبدالعزيز الزهراني",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulaziz-zahrani/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "57",
+    "name": "Abdullah Al-Burimi",
+    "arabicName": "عبدالله البريمي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdullah-buraimi/r1/",
+    "totalSurahs": 69,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "58",
+    "name": "Abdullah Albuajan",
+    "arabicName": "عبدالله البعيجان",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdullah-buaijan/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "59",
+    "name": "Abdullah Al-Mattrod",
+    "arabicName": "عبدالله المطرود",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdullah-matrood/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "6",
+    "name": "Ahmad Al-Hawashi",
+    "arabicName": "أحمد الحواشي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ahmad-hawashi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "60",
+    "name": "Abdullah Basfer",
+    "arabicName": "عبدالله بصفر",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdullah-basfar/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "61",
+    "name": "Abdullah Khayyat",
+    "arabicName": "عبدالله خياط",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdullah-khayyat/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "62",
+    "name": "Abdullah Al-Johany",
+    "arabicName": "عبدالله عواد الجهني",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdullah-juhani/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "63",
+    "name": "Abdullah Qaulan",
+    "arabicName": "عبدالله غيلان",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdullah-ghailan/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "64",
+    "name": "Abdulrasheed Soufi",
+    "arabicName": "عبدالرشيد صوفي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulrasheed-sufi/r3/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "66",
+    "name": "Abdulmohsin Al-Harthy",
+    "arabicName": "عبدالمحسن الحارثي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulmohsen-harthi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "67",
+    "name": "Abdulmohsen Al-Qasim",
+    "arabicName": "عبدالمحسن القاسم",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulmohsen-qasim/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "68",
+    "name": "Abdulmohsin Al-Askar",
+    "arabicName": "عبدالمحسن العسكر",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulmohsen-askar/r1/",
+    "totalSurahs": 4,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "69",
+    "name": "Abdulmohsin Al-Obaikan",
+    "arabicName": "عبدالمحسن العبيكان",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulmohsen-obaikan/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "7",
+    "name": "Ahmad Saud",
+    "arabicName": "أحمد سعود",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ahmad-saud/r1/",
+    "totalSurahs": 30,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "70",
+    "name": "Abdulhadi Kanakeri",
+    "arabicName": "عبدالهادي أحمد كناكري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulhadi-kanakeri/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "71",
+    "name": "Abdulwadood Haneef",
+    "arabicName": "عبدالودود حنيف",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulwadood-haneef/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "72",
+    "name": "Abdulwali Al-Arkani",
+    "arabicName": "عبدالولي الأركاني",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulwali-arkani/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "73",
+    "name": "Ali Abo-Hashim",
+    "arabicName": "علي أبو هاشم",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ali-abuhashim/r1/",
+    "totalSurahs": 14,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "74",
+    "name": "Ali Alhuthaifi",
+    "arabicName": "علي بن عبدالرحمن الحذيفي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ali-hudhaifi/r3/",
+    "totalSurahs": 114,
+    "style": "Sho'bah A'n Asim - Murattal"
+  },
+  {
+    "id": "76",
+    "name": "Ali Jaber",
+    "arabicName": "علي جابر",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ali-jaber/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "77",
+    "name": "Ali Hajjaj Alsouasi",
+    "arabicName": "علي حجاج السويسي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ali-souissi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "78",
+    "name": "Emad Hafez",
+    "arabicName": "عماد زهير حافظ",
+    "serverUrl": "https://cdn.mp3quran.net/audio/imad-hafez/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "79",
+    "name": "Abdulaziz Alturki",
+    "arabicName": "عبدالعزيز التركي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdulaziz-turki/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "8",
+    "name": "Ahmad Saber",
+    "arabicName": "أحمد صابر",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ahmad-saber/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "80",
+    "name": "Omar Al-Qazabri",
+    "arabicName": "عمر القزابري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/omar-kazabri/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Warsh A'n Nafi' - Murattal"
+  },
+  {
+    "id": "81",
+    "name": "Fares Abbad",
+    "arabicName": "فارس عباد",
+    "serverUrl": "https://cdn.mp3quran.net/audio/fares-abbad/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "82",
+    "name": "Fahad Al-Otaibi",
+    "arabicName": "فهد العتيبي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/fahad-otaibi/r1/",
+    "totalSurahs": 8,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "83",
+    "name": "Fahad Al-Kandari",
+    "arabicName": "فهد الكندري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/fahad-kandari/r1/",
+    "totalSurahs": 77,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "84",
+    "name": "Fawaz Alkabi",
+    "arabicName": "فواز الكعبي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/fawaz-kaabi/r1/",
+    "totalSurahs": 49,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "85",
+    "name": "Lafi Al-Oni",
+    "arabicName": "لافي العوني",
+    "serverUrl": "https://cdn.mp3quran.net/audio/lafi-oni/r1/",
+    "totalSurahs": 84,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "86",
+    "name": "Nasser Alqatami",
+    "arabicName": "ناصر القطامي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/nasser-qatami/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "87",
+    "name": "Nabil Al Rifay",
+    "arabicName": "نبيل الرفاعي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/nabil-rifai/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "88",
+    "name": "Neamah Al-Hassan",
+    "arabicName": "نعمة الحسان",
+    "serverUrl": "https://cdn.mp3quran.net/audio/neama-hassan/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "89",
+    "name": "Hani Arrifai",
+    "arabicName": "هاني الرفاعي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/hani-rifai/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "9",
+    "name": "Ahmad Nauina",
+    "arabicName": "أحمد نعينع",
+    "serverUrl": "https://cdn.mp3quran.net/audio/ahmad-naina/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "90",
+    "name": "Walid Al-Dulaimi",
+    "arabicName": "وليد الدليمي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/waleed-dulaimi/r1/",
+    "totalSurahs": 58,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "91",
+    "name": "Waleed Alnaehi",
+    "arabicName": "وليد النائحي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/waleed-naehi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Qalon A'n Nafi' Men Tariq Abi Nasheet - Murattal"
+  },
+  {
+    "id": "92",
+    "name": "Yasser Al-Dosari",
+    "arabicName": "ياسر الدوسري",
+    "serverUrl": "https://cdn.mp3quran.net/audio/yasser-dosari/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "93",
+    "name": "Yasser Al-Qurashi",
+    "arabicName": "ياسر القرشي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/yasser-qurashi/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "94",
+    "name": "Yasser Al-Faylakawi",
+    "arabicName": "ياسر الفيلكاوي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/yasser-faylakawi/r1/",
+    "totalSurahs": 87,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "95",
+    "name": "Yasser Al-Mazroyee",
+    "arabicName": "ياسر المزروعي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/yasser-mazrouei/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Rowis and Rawh A'n Yakoob Al Hadrami  - Murattal"
+  },
+  {
+    "id": "96",
+    "name": "Yahya Hawwa",
+    "arabicName": "يحيى حوا",
+    "serverUrl": "https://cdn.mp3quran.net/audio/yahya-hawwa/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "97",
+    "name": "Yousef Alshoaey",
+    "arabicName": "يوسف الشويعي",
+    "serverUrl": "https://cdn.mp3quran.net/audio/yousef-shoaey/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  },
+  {
+    "id": "98",
+    "name": "Abdullah Abdal",
+    "arabicName": "عبدالله عبدل",
+    "serverUrl": "https://cdn.mp3quran.net/audio/abdullah-abdal/r1/",
+    "totalSurahs": 114,
+    "style": "Rewayat Hafs A'n Assem - Murattal"
+  }
+]
